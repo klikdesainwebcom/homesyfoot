@@ -1,5 +1,4 @@
 <script>
-    var strLabel = document.getElementById('search_option').value;
 var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = decodeURIComponent(window.location.search.substring(1)),
         sURLVariables = sPageURL.split('&'),
@@ -13,6 +12,5 @@ var getUrlParameter = function getUrlParameter(sParam) {
     }
 };
 var strQuery = getUrlParameter('q');
-//window.location.href = "https://www.homesyfoot.com/search?q="+ strLabel + " " + strQuery;
-  window.location.href = "https://www.homesyfoot.com/search/label/"+ strLabel + " " + strQuery
+window.location.href = "https://www.homesyfoot.com/search?q="+ strQuery;
 </script>
