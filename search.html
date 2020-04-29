@@ -13,7 +13,6 @@ var getUrlParameter = function getUrlParameter(sParam) {
 };
 var strQuery = getUrlParameter('q');
     
-try {
 
     var currentUrl = "q=" + strQuery;
     var urlQueryRegex = /\?(\w+=\w+)/g;
@@ -29,9 +28,7 @@ try {
     
     window.location.href = newUrl;
     
-} catch (ex) {
-    alert(ex);
-}    
+
 //window.location.href = "https://www.google.com/search?q=site:www.homesyfoot.com "+ strQuery;
     
 
