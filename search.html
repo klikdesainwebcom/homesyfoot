@@ -15,7 +15,7 @@ var strQuery = getUrlParameter('q');
     
 try {
 
-    var currentUrl = "www.homesyfoot.com/?q=" + strQuery;
+    var currentUrl = "q=" + strQuery;
     var urlQueryRegex = /\?(\w+=\w+)/g;
     var queryIndex = currentUrl.indexOf("?");
     var currentUrlWithoutQuery = currentUrl;
