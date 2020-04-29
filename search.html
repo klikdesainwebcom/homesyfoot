@@ -12,8 +12,28 @@ var getUrlParameter = function getUrlParameter(sParam) {
     }
 };
 var strQuery = getUrlParameter('q');
+    
+try {
+
+    var currentUrl = "www.homesyfoot.com/?q=" + strQuery;
+    var urlQueryRegex = /\?(\w+=\w+)/g;
+    var queryIndex = currentUrl.indexOf("?");
+    var currentUrlWithoutQuery = currentUrl;
+    
+    if (queryIndex > -1) {
+        currentUrlWithoutQuery = currentUrl.slice(0, queryIndex);
+    }
+    
+    var currentQueries = currentUrl.match(urlQueryRegex);
+    var newUrl = "www.homesyfoot.com/" + currentQueries.join("");
+    
+    window.location.href = newUrl;
+    
+} catch (ex) {
+    alert(ex);
+}    
 //window.location.href = "https://www.google.com/search?q=site:www.homesyfoot.com "+ strQuery;
     
-window.location.href = "https://www.homesyfoot.com/search/?q=" strQuery;
+
     
 </script>
