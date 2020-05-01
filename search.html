@@ -12,12 +12,12 @@ var getUrlParameter = function getUrlParameter(sParam) {
     }
 };
 var strQuery = getUrlParameter('q');
-var strLabel = document.getElementById('search_option').value;
-var strInput = document.getElementById('qfront').value;
+//var strLabel = document.getElementById('search_option').value;
+//var strInput = document.getElementById('qfront').value;
 
 
-
-
+var strLabel = frmQuery.elements["search_option"].value;
+var strInput = frmQuery.elements["qfront"].value;
 
 
 window.location.href = "https://www.homesyfoot.com/search/?q=" + strLabel + "/-/" + strInput;
