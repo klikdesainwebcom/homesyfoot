@@ -1,24 +1,32 @@
+<form id='frmQuery' action='https://www.homesyfoot/search/' method='get' target='_top'>
+                  	<div class='d_block'>
+						<div class='c3'>
+                            <select id='search_option' name='q'>
+                                <option disabled='disabled' selected='selected' value=''>Pilih kategori ...</option>
+                                <option value='desain-rumah'>Desain Rumah</option>
+                                <option value='jual-rumah'>Jual Rumah</option>
+                                <option value='sewa-rumah'>Sewa Rumah</option>
+                                <option value='destinasi-wisata'>Destinasi Wisata</option>
+                                <option value='gaya-hidup'>Gaya Hidup</option>
+                                <option value='ensiklopedia'>Ensiklopedia</option>
+                                <option value='blog'>Lainnya</option>
+                            </select>
+                      	</div>
+						<div class='c9'>
+                          <input id='qfront' name='q' placeholder='Search ...' type='text'/><button class='search-icon' id='submitq' type='submit'><amp-img alt='' height='35' layout='fixed' src='https://3.bp.blogspot.com/-gQII5peTDhY/XCmUeIH3HGI/AAAAAAAABJQ/9v-1qN6vnwQSfNodni0p9-lakJNbyOKGwCK4BGAYYCw/s1600/diarynesia_search_icon.png' title='' width='35'/></button>
+                  		</div>		
+                  	</div>
+                </form>
+
+
 <script>
-var getUrlParameter = function getUrlParameter(sParam) {
-    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-        sURLVariables = sPageURL.split('&'),
-        sParameterName,
-        i;
-    for (i = 0; i < sURLVariables.length; i++) {
-        sParameterName = sURLVariables[i].split('=');
-        if (sParameterName[0] === sParam) {
-            return sParameterName[1] === undefined ? true : sParameterName[1];
-        }
-    }
-};
-var strQuery = getUrlParameter('q');
-//var strLabel = document.getElementById('search_option').value;
-//var strInput = document.getElementById('qfront').value;
+function(){
+var strLabel = document.getElementById('search_option').value;
+var strQuery = document.getElementById('qfront').value;
+window.location.href = "https://www.homesyfoot.com/search/?q=" + strLabel + "/-/" + strQuery;
+}
 
 
-var strLabel = frmQuery.elements["search_option"].value;
-var strInput = frmQuery.elements["qfront"].value;
 
 
-window.location.href = "https://www.homesyfoot.com/search/?q=" + strLabel + "/-/" + strInput;
 </script>
