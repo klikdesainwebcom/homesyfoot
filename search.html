@@ -19,7 +19,7 @@ display:block;
 
 </style>
 
-<form id='frmQuery' action='https://www.homesyfoot/search/' method='get' target='_top'>
+<form id='frmQuery' action='https://www.homesyfoot/search/' method='get' target='_top' onsubmit="return checkRegistration()">
                   	<div class='d_block'>
 						<div class='c3'>
                             <select id='search_option' name='q'>
@@ -41,7 +41,7 @@ display:block;
 
 
 <script>
-function(){
+function checkRegistration(){
 var strLabel = document.getElementById('search_option').value;
 var strQuery = document.getElementById('qfront').value;
 window.location.href = "https://www.homesyfoot.com/search/?q=" + strLabel + "/-/" + strQuery;
